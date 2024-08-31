@@ -7,69 +7,25 @@ function ResourcePage() {
     return (
         <div className="resource-page">
             <Navbar />
-            <div className="resources-container">
-                <h2>Resources</h2>
-
-                <div className="resource-section">
-                    <h3>Learning Resources</h3>
-                    <ul>
-                        <li className="resource-item">
-                            <a href="#">Data Science Tutorials</a> - Comprehensive guides to master Data Science.
-                        </li>
-                        <li className="resource-item">
-                            <a href="#">AI & Machine Learning</a> - Learn AI and ML concepts from scratch.
-                        </li>
-                        <li className="resource-item">
-                            <a href="#">Web Development</a> - Resources to become a full-stack developer.
-                        </li>
-                    </ul>
+            <div className="container">
+                <h1 className="page-title">Resources to Boost Your Career</h1>
+                <div className="resources-section">
+                    <div className="resource-card">
+                        <h2>Learning Resources</h2>
+                        <p>Access a variety of learning materials, courses, and tutorials to enhance your skills.</p>
+                        <a href="/learning-resources" className="resource-link">Explore Learning Resources</a>
+                    </div>
+                    <div className="resource-card">
+                        <h2>Skill Practice</h2>
+                        <p>Find tools and exercises to practice and improve your skills in various domains.</p>
+                        <a href="/skill-practice" className="resource-link">Start Practicing</a>
+                    </div>
+                    <div className="resource-card">
+                        <h2>Resume Making Tools</h2>
+                        <p>Use our resume templates and guides to create a professional resume that stands out.</p>
+                        <a href="/resume-tools" className="resource-link">Create Your Resume</a>
+                    </div>
                 </div>
-
-                <div className="resource-section">
-                    <h3>Skill Practice Resources</h3>
-                    <ul>
-                        <li className="resource-item">
-                            <a href="#">Coding Challenges</a> - Practice coding problems on various platforms.
-                        </li>
-                        <li className="resource-item">
-                            <a href="#">Mock Interviews</a> - Prepare with mock interviews and expert feedback.
-                        </li>
-                        <li className="resource-item">
-                            <a href="#">Project Ideas</a> - Find ideas for projects to enhance your portfolio.
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="resource-section">
-                    <h3>Resume Building Tools</h3>
-                    <ul>
-                        <li className="resource-item">
-                            <a href="#">Resume Builder</a> - Create a professional resume using our tool.
-                        </li>
-                        <li className="resource-item">
-                            <a href="#">Resume Templates</a> - Explore and download resume templates.
-                        </li>
-                        <li className="resource-item">
-                            <a href="#">Resume Review</a> - Get your resume reviewed by industry experts.
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="resource-section">
-                    <h3>Job Search Tools</h3>
-                    <ul>
-                        <li className="resource-item">
-                            <a href="#">Job Board</a> - Explore job opportunities across various domains.
-                        </li>
-                        <li className="resource-item">
-                            <a href="#">Company Reviews</a> - Read reviews about companies from current and former employees.
-                        </li>
-                        <li className="resource-item">
-                            <a href="#">Salary Insights</a> - Get insights on salary trends in your industry.
-                        </li>
-                    </ul>
-                </div>
-
             </div>
             <Footer />
         </div>

@@ -1,56 +1,68 @@
 .resource-page {
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f5f7;
 }
 
-.resources-container {
-    margin-top: 80px;
-    padding: 20px;
+.container {
+    padding: 2rem;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
 }
 
-.resources-container h2 {
-    margin-bottom: 30px;
-    font-size: 28px;
+.page-title {
+    font-size: 2.5rem;
     color: #333;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
-.resource-section {
-    margin-bottom: 40px;
+.resources-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.resource-section h3 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #0073e6;
-    border-bottom: 2px solid #0073e6;
-    padding-bottom: 10px;
+.resource-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.resource-item {
-    padding: 10px 0;
-    font-size: 18px;
-    color: #555;
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.resource-item a {
+.resource-card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #333;
+}
+
+.resource-card p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #666;
+}
+
+.resource-link {
+    display: inline-block;
+    font-size: 1rem;
+    color: #007bff;
     text-decoration: none;
-    color: #0073e6;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.resource-item a:hover {
-    text-decoration: underline;
-}
-
-.resource-item:not(:last-child) {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 10px;
+.resource-link:hover {
+    background-color: #007bff;
+    color: #fff;
 }
