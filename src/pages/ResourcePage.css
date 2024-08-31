@@ -1,68 +1,127 @@
+/* General Page Styling */
 .resource-page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #f4f5f7;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
+                url('https://www.transparenttextures.com/patterns/cubes.png') center/cover; /* Adds texture to the background */
+    padding: 20px 0;
 }
 
+/* Container Styling */
 .container {
-    padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
+    text-align: center;
 }
 
+/* Page Title */
 .page-title {
     font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 2rem;
-    text-align: center;
+    margin-bottom: 40px;
+    color: #007bff;
+    animation: fadeInDown 1s ease-out;
 }
 
+/* Quote Styling */
+.quote {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in;
+}
+
+/* Resources Section */
 .resources-section {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
+/* Resource Card Styling */
 .resource-card {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    position: relative;
 }
 
 .resource-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
 }
 
 .resource-card h2 {
-    margin-bottom: 1rem;
-    font-size: 1.75rem;
-    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .resource-card p {
-    margin-bottom: 1rem;
     font-size: 1rem;
-    color: #666;
+    color: #555;
 }
 
+/* Resource Link/Button Styling */
 .resource-link {
     display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
     font-size: 1rem;
-    color: #007bff;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
     text-decoration: none;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border: 2px solid #007bff;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    position: relative;
 }
 
 .resource-link:hover {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.resource-link:focus {
+    outline: none;
+}
+
+/* Animation for Page Title */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for Quote */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resources-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resource-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }

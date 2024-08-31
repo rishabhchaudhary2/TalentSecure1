@@ -37,9 +37,9 @@ function JobRecommendationPage() {
                         </div>
                         {/* Add more job items as needed */}
                     </div>
-                    <p>
+                    {/* <p>
                         Interested in more opportunities? <a href="/all-jobs" className="view-more">View More Jobs</a>
-                    </p>
+                    </p> */}
                 </div>
             </main>
             <Footer />
