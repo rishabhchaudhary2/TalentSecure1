@@ -1,37 +1,56 @@
-/* Ensure no margin or padding issues for the whole page */
 .resource-page {
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
 }
 
-.resource-page > .Navbar {
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000; /* Ensure the navbar is on top */
-}
-
-/* Adjust padding for the container to avoid overlap with fixed navbar */
 .resources-container {
-    margin-top: 60px; /* Adjust this value according to the height of your Navbar */
+    margin-top: 80px;
     padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .resources-container h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+}
+
+.resource-section {
+    margin-bottom: 40px;
+}
+
+.resource-section h3 {
     margin-bottom: 20px;
+    font-size: 24px;
+    color: #0073e6;
+    border-bottom: 2px solid #0073e6;
+    padding-bottom: 10px;
 }
 
 .resource-item {
-    border-bottom: 1px solid #ddd;
     padding: 10px 0;
+    font-size: 18px;
+    color: #555;
 }
 
-.resource-item:last-child {
-    border-bottom: none;
+.resource-item a {
+    text-decoration: none;
+    color: #0073e6;
+}
+
+.resource-item a:hover {
+    text-decoration: underline;
+}
+
+.resource-item:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
 }
