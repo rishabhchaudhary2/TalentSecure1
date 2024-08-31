@@ -1,28 +1,23 @@
 import React, { useState } from 'react';
-import './LoginPage.css';
+import './OrganizationLoginPage.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-function LoginPage() {
+function OrganizationLoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [isOrganization, setIsOrganization] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle login logic here
-    };
-
-    const toggleOrganization = () => {
-        setIsOrganization(!isOrganization);
+        // Handle organization login logic here
     };
 
     return (
-        <div className="login-signup-page">
+        <div className="login-page">
             <Navbar />
             <div className="form-wrapper">
                 <div className="form-container">
-                    <h2>{isOrganization ? 'Organization Login' : 'User Login'}</h2>
+                    <h2>Organization Login</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="email">Email</label>
@@ -49,13 +44,10 @@ function LoginPage() {
                         <button type="submit" className="login-button">Login</button>
                     </form>
                     <p>
-                        {isOrganization ? 'Not registered?' : 'Not registered as an organization?'}
-                        <span className="toggle-link" onClick={toggleOrganization}>
-                            {isOrganization ? ' Switch to User Login' : ' Switch to Organization Login'}
-                        </span>
-                    </p>
                     <p>
-                        Don't have an account? <a href="/signup">Sign up here</a>
+                        User Login <a href="/user-login">Login here</a>
+                        </p>
+                        Don't have an account? <a href="/organization-signup">Sign up here</a>
                     </p>
                 </div>
             </div>
@@ -64,4 +56,4 @@ function LoginPage() {
     );
 }
 
-export default LoginPage;
+export default OrganizationLoginPage;
