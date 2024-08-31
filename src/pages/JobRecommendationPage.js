@@ -5,24 +5,30 @@ import Footer from '../components/Footer';
 
 function JobRecommendationPage() {
     const [currentPage, setCurrentPage] = useState(1);
-    const jobsPerPage = 3;
+    const companiesPerPage = 3;
 
-    // Mock data for jobs (you can replace this with data fetched from an API)
-    const jobs = [
-        { title: 'Software Engineer', company: 'Tech Innovations Ltd.', location: 'San Francisco, CA', experience: '2-4 years' },
-        { title: 'Data Scientist', company: 'Data Insights Inc.', location: 'New York, NY', experience: '3-5 years' },
-        { title: 'Front-End Developer', company: 'Web Solutions Co.', location: 'Remote', experience: '1-3 years' },
-        { title: 'Back-End Developer', company: 'Web Solutions Co.', location: 'Remote', experience: '1-3 years' },
-        { title: 'AI Specialist', company: 'Tech Innovations Ltd.', location: 'San Francisco, CA', experience: '3-5 years' },
-        { title: 'DevOps Engineer', company: 'Data Insights Inc.', location: 'New York, NY', experience: '3-5 years' },
-        // Add more job items as needed
+    // Mock data for top companies (you can replace this with data fetched from an API)
+    const companies = [
+        { name: 'Google', location: 'Mountain View, CA' },
+        { name: 'Microsoft', location: 'Redmond, WA' },
+        { name: 'Apple', location: 'Cupertino, CA' },
+        { name: 'Amazon', location: 'Seattle, WA' },
+        { name: 'Facebook', location: 'Menlo Park, CA' },
+        { name: 'IBM', location: 'Armonk, NY' },
+        { name: 'Intel', location: 'Santa Clara, CA' },
+        { name: 'Adobe', location: 'San Jose, CA' },
+        { name: 'Salesforce', location: 'San Francisco, CA' },
+        { name: 'Oracle', location: 'Redwood City, CA' },
+        { name: 'Cisco', location: 'San Jose, CA' },
+        { name: 'SAP', location: 'Walldorf, Germany' },
+        // Add more companies as needed
     ];
 
-    const totalPages = Math.ceil(jobs.length / jobsPerPage);
+    const totalPages = Math.ceil(companies.length / companiesPerPage);
 
-    const indexOfLastJob = currentPage * jobsPerPage;
-    const indexOfFirstJob = indexOfLastJob - jobsPerPage;
-    const currentJobs = jobs.slice(indexOfFirstJob, indexOfLastJob);
+    const indexOfLastCompany = currentPage * companiesPerPage;
+    const indexOfFirstCompany = indexOfLastCompany - companiesPerPage;
+    const currentCompanies = companies.slice(indexOfFirstCompany, indexOfLastCompany);
 
     const handleClick = (pageNumber) => {
         setCurrentPage(pageNumber);
@@ -33,18 +39,16 @@ function JobRecommendationPage() {
             <Navbar />
             <main className="job-recommendation-main">
                 <div className="job-recommendation-container">
-                    <h2>Job Recommendations</h2>
+                    <h2>Top Companies</h2>
                     <p>
-                        Based on your skills and recent assessments, we’ve curated a list of job opportunities that match your profile. Explore these opportunities to find the right fit for your career goals.
+                        Based on recent industry evaluations, here are some of the top companies that might interest you. Explore these opportunities to find the right fit for your career goals.
                     </p>
-                    <div className="job-list">
-                        {currentJobs.map((job, index) => (
-                            <div key={index} className="job-item">
-                                <h3>{job.title}</h3>
-                                <p>Company: {job.company}</p>
-                                <p>Location: {job.location}</p>
-                                <p>Experience: {job.experience}</p>
-                                <button className="apply-button">Apply Now</button>
+                    <div className="company-list">
+                        {currentCompanies.map((company, index) => (
+                            <div key={index} className="company-item">
+                                <h3>{company.name}</h3>
+                                <p>Location: {company.location}</p>
+                                <button className="apply-button">Learn More</button>
                             </div>
                         ))}
                     </div>

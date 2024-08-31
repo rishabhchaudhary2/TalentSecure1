@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 import './OrganizationSignupPage.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
 
 function OrganizationSignupPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [organizationName, setOrganizationName] = useState('');
-    const [contactNumber, setContactNumber] = useState('');
-
+    const [Fname, setFirstName] = useState('');
+    const [Lname, setLastName] = useState('');
+  
+    const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
         if (password === confirmPassword) {
@@ -24,7 +28,7 @@ function OrganizationSignupPage() {
             <Navbar />
             <div className="form-wrapper">
                 <div className="form-container">
-                    <h2>Organization Signup</h2>
+                    <h2>Admin Signup</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="email">Email</label>
@@ -60,28 +64,54 @@ function OrganizationSignupPage() {
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="organization-name">Organization Name</label>
+                            <label htmlFor="fname">First Name</label>
                             <input
                                 type="text"
-                                id="organization-name"
-                                value={organizationName}
-                                onChange={(e) => setOrganizationName(e.target.value)}
+                                id="fname"
+                                value={Fname}
+                                onChange={(e) => setFirstName(e.target.value)}
                                 required
                                 placeholder="Enter your organization name"
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="contact-number">Contact Number</label>
+                            <label htmlFor="lname">Last Name</label>
                             <input
                                 type="text"
-                                id="contact-number"
-                                value={contactNumber}
-                                onChange={(e) => setContactNumber(e.target.value)}
+                                id="lname"
+                                value={Lname}
+                                onChange={(e) => setLastName(e.target.value)}
                                 required
                                 placeholder="Enter your contact number"
                             />
                         </div>
-                        <button type="submit" className="signup-button">Signup</button>
+                        <button type="submit" className="signup-button"  onClick={async () => {
+                            let flag=0;
+                            try{
+                                
+                                const user = await axios.post('http://localhost:8787/api/v1/admin/signup', {
+                                        email : email,
+                                        password : password,
+                                        firstName : Fname,
+                                        lastName:Lname
+                                })
+                                console.log(user);
+                                const token = user.data.token;
+                                localStorage.setItem('jwttoken',`Bearer ${token}`);
+                                flag=1;
+                                
+                            }
+                            catch(error)
+                            {
+                                console.error(error);
+                                flag=0;
+                            }
+                            if(flag===1)
+                            {
+                                navigate('/company-dashboard');
+
+                            }
+                        }}>Signup</button>
                     </form>
                     <p>
                     <p>

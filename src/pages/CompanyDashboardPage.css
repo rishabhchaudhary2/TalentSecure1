@@ -1,147 +1,157 @@
-/* CompanyDashboardPage.css */
-.company-dashboard-page {
-    padding: 40px 20px;
-    background-color: #f7f7f7; /* Light background color */
-    min-height: 100vh; /* Ensure full height */
+/* src/components/JobListingComponent.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for job listings and admin profile */
+.job-listing-component {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-}
-
-/* Company Dashboard Container */
-.company-dashboard-container {
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
-    margin: 0 auto; /* Center the container */
-    flex: 1; /* Flex-grow to push footer to the bottom */
-}
-
-/* Heading Styles */
-.company-dashboard-container h2 {
-    margin-bottom: 30px;
-    font-size: 2rem;
-    color: #333;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
-}
-
-/* Overview Section */
-.dashboard-overview {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
-
-.overview-card {
-    background: #007bff;
-    color: #fff;
+    justify-content: center; /* Center the job listings horizontally */
     padding: 20px;
-    border-radius: 8px;
-    width: 30%;
+    background-color: #f4f4f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 270px; /* Ensure space for the admin profile */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.main-content {
+    margin-top: 80px; /* Adjust based on the height of the navbar */
+}
+
+/* Job listing and details styling */
+.job-list {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+    gap: 25px;
+}
+
+.job-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px; /* Set a fixed width for the job items */
+    height: auto; /* Allow height to adjust based on content */
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
 }
 
-.overview-card h3 {
+.job-item:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.job-item h3 {
+    font-size: 20px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.job-item p {
+    font-size: 16px;
+    color: #555;
     margin-bottom: 10px;
-    font-size: 1.25rem;
 }
 
-/* Job Listings Section */
-.job-listings {
-    margin-bottom: 30px;
+.job-item button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
-.job-listings h3 {
-    margin-bottom: 20px;
-    font-size: 1.5rem;
+.job-item button:hover {
+    background-color: #0056b3;
+}
+
+.job-details {
+    margin-top: 40px;
+    padding: 25px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.job-details h3 {
+    font-size: 24px;
+    margin-bottom: 25px;
     color: #333;
 }
 
-.job-table {
-    width: 100%;
-    border-collapse: collapse;
+.vacancy-update {
+    margin-bottom: 25px;
 }
 
-.job-table th,
-.job-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
+.vacancy-update label {
+    font-size: 16px;
+    color: #555;
 }
 
-.job-table th {
-    background: #f4f4f4;
-}
-
-/* Post Job Section */
-.post-job {
-    margin-bottom: 30px;
-}
-
-.post-job input,
-.post-job select {
-    display: block;
-    margin-bottom: 15px;
-    padding: 10px;
+.vacancy-update input {
+    width: 60px;
+    padding: 8px;
+    margin-left: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    width: 100%;
-}
-
-.post-job button {
-    background: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.post-job button:hover {
-    background: #0056b3;
-}
-
-/* Applicant Tracking Section */
-.applicant-tracking {
-    margin-bottom: 30px;
+    font-size: 16px;
 }
 
 .applicant-list {
+    margin-top: 30px;
+}
+
+.applicant-list h4 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.applicant-item {
     display: flex;
-    flex-direction: column;
-}
-
-.applicant {
-    background: #fff;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.applicant button {
-    background: #007bff;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.applicant button:hover {
-    background: #0056b3;
-}
-
-/* Footer */
-footer {
-    background: #007bff;
-    color: #fff;
+    justify-content: space-between;
+    align-items: center;
     padding: 15px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+}
+
+.applicant-item p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.applicant-item button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.applicant-item button:hover {
+    background-color: #218838;
 }

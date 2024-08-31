@@ -11,7 +11,8 @@ import JobRecommendationPage from './pages/JobRecommendationPage';
 import MentorPage from './pages/MentorPage';
 import CodingInterviewPage from './pages/CodingInterviewPage';
 import DashboardPage from './pages/DashboardPage';
-
+import MCQTestPage from './pages/MCQTestPage'; // Corrected import
+import CompanyDashboardPage from './pages/CompanyDashboardPage'
 function App() {
   return (
     <Router>
@@ -27,6 +28,8 @@ function App() {
         <Route path="/mentor" element={<MentorPage />} />
         <Route path="/coding-interview" element={<CodingInterviewPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/mcqtest-page" element={<MCQTestPage />} /> {/* Corrected component name */}
+        <Route path="/company-dashboard" element={<CompanyDashboardPage />} /> {/* Corrected component name */}
       </Routes>
     </Router>
   );

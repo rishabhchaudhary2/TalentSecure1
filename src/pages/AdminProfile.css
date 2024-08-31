@@ -1,0 +1,33 @@
+/* src/components/AdminProfile.css */
+
+.admin-profile {
+    position: fixed;
+    top: 80px; /* Adjust this based on the height of your navbar */
+    right: 20px;
+    width: 250px; /* Adjust width as needed */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it’s above other content */
+    max-height: calc(100vh - 100px); /* Limit height if necessary */
+    overflow-y: auto; /* Enable scroll if content exceeds height */
+}
+
+.admin-profile h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.profile-info p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.profile-info strong {
+    color: #007bff;
+}

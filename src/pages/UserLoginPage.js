@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './UserLoginPage.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import axios from 'axios';
 
 function UserLoginPage() {
     const [email, setEmail] = useState('');
@@ -41,7 +42,24 @@ function UserLoginPage() {
                                 placeholder="Enter your password"
                             />
                         </div>
-                        <button type="submit" className="login-button">Login</button>
+                        <button type="submit" className="login-button" onClick={async () =>  {
+                            try {
+
+                                const user = await axios.post('http://localhost:8787/api/v1/admin/signin', {
+                                    data: {
+                                        email: email,
+                                        password: password,
+
+                                    }
+                                })
+                                const token = user.data.token;
+                                localStorage.setItem('jwttoken', `Bearer ${token}`);
+
+                            }
+                            catch (error) {
+                                console.error(error);
+                            }
+                        }}>Login</button>
                     </form>
                    
                     <p>

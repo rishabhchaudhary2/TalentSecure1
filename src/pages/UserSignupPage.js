@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './UserSignupPage.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import axios from 'axios';
 
 function UserSignupPage() {
     const [email, setEmail] = useState('');
@@ -81,7 +82,27 @@ function UserSignupPage() {
                                 placeholder="Enter your last name"
                             />
                         </div>
-                        <button type="submit" className="signup-button">Signup</button>
+                        <button type="submit" className="signup-button" onClick={async () => {
+                            try{
+                            const user = await axios.post('http://localhost:8787/api/v1/user/signup', {
+                                data : {
+                                    email : email,
+                                    password : password,
+                                    name : firstName
+                                }
+                            });
+                            const token=user.data.token;
+                            localStorage.setItem(`jwttoken`,`bearer ${token}`)
+        
+
+                        }
+                        catch(error)
+                        {
+                            console.error(error);
+                        }
+                        
+
+                        }}>Signup</button>
                     </form>
                     <p>
                         Already have an account? <a href="/user-login">Login here</a>

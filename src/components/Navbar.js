@@ -19,15 +19,17 @@ const Navbar = () => {
             </div>
             <div className={`nav-links ${isOpen ? 'show' : ''}`}>
                 <Link to="/">Home</Link>
-                <Link to="/user-login">Login</Link>
+               
                 {/* <Link to="/signup">Sign Up</Link> */}
                 <Link to="/resources">Resources</Link>
                 <Link to="/skill-test">Skill Test</Link>
-                <Link to="/job-recommendations">Jobs</Link>
+                <Link to="/job-recommendations">Companies</Link>
                 <Link to="/mentor">Mentors</Link>
                 {/* <Link to="/user-dashboard">Go to User Dashboard</Link>
                 <Link to="/company-dashboard">Go to company Dashboard</Link> */}
                 <Link to="/dashboard">Dashboard</Link>
+                <Link to="/mcqtest-page">Mcq Test</Link>
+                <Link to="/user-login">Login</Link>
             </div>
         </nav>
     );
