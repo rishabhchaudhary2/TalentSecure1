@@ -1,0 +1,224 @@
+/* Global reset to remove default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Page layout */
+.homepage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif; /* Use a modern, readable font */
+  background-color: #f4f4f4; /* Light background color for the whole page */
+}
+
+/* Hero section styling */
+.hero-section {
+  background: linear-gradient(135deg, #007bff, #00c4ff); /* Gradient background */
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #fff;
+  color: #007bff;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  animation: fadeInUp 2s ease-out;
+}
+
+.cta-button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Mission section styling */
+.mission-section,
+.target-section,
+.how-it-works-section,
+.features-intro {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.mission-section h2,
+.target-section h2,
+.how-it-works-section h2,
+.features-intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.mission-section p,
+.target-section p,
+.how-it-works-section p,
+.features-intro p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* How It Works section styling */
+.how-it-works-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.step {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.step:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.step h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.step p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Features section styling */
+.features-intro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* .features-intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-out;
+} */
+
+/* .features-intro p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  animation: fadeInUp 1.5s ease-out;
+} */
+
+/* Features styling */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.feature {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Explore Dashboard section styling */
+.explore-dashboard {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.explore-dashboard h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.explore-dashboard p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.explore-dashboard .cta-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.explore-dashboard .cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer styling */
+footer {
+  margin-top: auto;
+  padding: 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

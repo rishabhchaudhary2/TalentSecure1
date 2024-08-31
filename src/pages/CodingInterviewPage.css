@@ -1,0 +1,14 @@
+.coding-interview-page {
+    padding: 40px 20px;
+}
+
+.coding-interview-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.coding-interview-container h2 {
+    margin-bottom: 20px;
+}

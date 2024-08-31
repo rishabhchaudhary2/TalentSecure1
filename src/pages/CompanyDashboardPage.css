@@ -1,0 +1,130 @@
+.company-dashboard-page {
+    padding: 40px 20px;
+    background-color: #f7f7f7; /* Light background color */
+}
+
+.company-dashboard-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+}
+
+.company-dashboard-container h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+/* Dashboard Overview Section */
+.dashboard-overview {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.overview-card {
+    background: #007bff;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.overview-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+/* Job Listings Section */
+.job-listings {
+    margin-bottom: 30px;
+}
+
+.job-listings h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.job-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.job-table th,
+.job-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.job-table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.job-table button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.job-table button:hover {
+    background-color: #0056b3;
+}
+
+/* Applicant Tracking Section */
+.applicant-tracking {
+    margin-bottom: 30px;
+}
+
+.applicant-tracking h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.applicant-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.applicant {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.applicant p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.applicant button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.applicant button:hover {
+    background-color: #0056b3;
+}

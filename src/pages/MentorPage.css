@@ -1,0 +1,52 @@
+/* Global reset to remove default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and border are included in element’s total width and height */
+}
+
+/* Ensure full height and zero margin on the body */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Mentor page specific styles */
+.mentor-page {
+    display: flex;
+    flex-direction: column; /* Align children in a column layout */
+    min-height: 100vh; /* Ensure the page takes up the full viewport height */
+    background-color: #f4f4f4; /* Background color for the page */
+}
+
+.mentor-container {
+    flex: 1; /* Allow the container to grow and fill the available space */
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Limit the width of the container */
+    margin: 20px auto; /* Center the container horizontally with a margin from the top and bottom */
+}
+
+.mentor-container h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333; /* Dark color for text */
+}
+
+/* Adjust navbar and footer if necessary */
+.Navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.Footer {
+    margin-top: auto; /* Push footer to the bottom of the page */
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+}

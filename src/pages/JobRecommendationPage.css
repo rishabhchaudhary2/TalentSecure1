@@ -1,0 +1,118 @@
+/* Global reset to remove default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Ensure full height and zero margin on the body */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Page layout and styling */
+.job-recommendation-page {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Ensure the page takes up the full viewport height */
+}
+
+/* Fixed navbar styling */
+.job-recommendation-page nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure the navbar stays on top */
+}
+
+/* Main content area to push down from the fixed navbar */
+.job-recommendation-main {
+    flex: 1; /* Allow main content to grow and fill available space */
+    padding-top: 60px; /* Adjust this value based on navbar height */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center align items horizontally */
+    background-color: #f4f4f4; /* Background color for the page */
+}
+
+/* Container for job recommendations */
+.job-recommendation-container {
+    background: #fff;
+    padding: 30px; /* Increase padding for better spacing */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Slightly larger shadow for a more pronounced effect */
+    width: 100%;
+    max-width: 1200px; /* Limit the width of the container */
+    margin: 20px auto; /* Center container horizontally with auto margins */
+    text-align: center; /* Center text inside the container */
+}
+
+/* Heading styles within the job recommendation container */
+.job-recommendation-container h2 {
+    margin-bottom: 30px; /* Increased margin for better spacing */
+    font-size: 2.5rem; /* Larger font size for better visibility */
+    color: #333; /* Dark color for text */
+    font-weight: 700; /* Bold font weight for emphasis */
+}
+
+/* Job list styling */
+.job-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Stack job items vertically */
+    gap: 20px; /* Space between job items */
+}
+
+/* Individual job item styling */
+.job-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative; /* Allow positioning of the button */
+}
+
+/* Job item heading */
+.job-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+/* Apply button styling */
+.apply-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    position: absolute; /* Position it at the bottom-right */
+    bottom: 20px; /* Space from the bottom */
+    right: 20px; /* Space from the right */
+}
+
+.apply-button:hover {
+    background-color: #0056b3;
+}
+
+/* Link to view more jobs */
+.view-more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.view-more:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling to ensure it is placed correctly */
+footer {
+    margin-top: auto; /* Push footer to the bottom */
+}

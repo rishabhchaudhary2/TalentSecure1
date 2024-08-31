@@ -1,0 +1,47 @@
+/* UserDashboardPage.css */
+.user-dashboard-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full height of the viewport */
+    background-color: #f4f4f4; /* Light background color for the page */
+}
+
+.user-dashboard-container {
+    flex: 1; /* Ensure it takes up remaining space */
+    padding: 20px;
+    max-width: 1200px; /* Center the content */
+    margin: 0 auto; /* Center horizontally */
+    background-color: #fff; /* White background for the dashboard */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for subtle depth */
+}
+
+.user-dashboard-container h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: #333; /* Dark color for text */
+    border-bottom: 2px solid #007bff; /* Blue border for header */
+    padding-bottom: 10px;
+}
+
+.user-dashboard-container p {
+    font-size: 1rem;
+    color: #666; /* Lighter color for paragraph text */
+    line-height: 1.6;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .user-dashboard-container {
+        padding: 15px;
+        max-width: 100%; /* Full width on smaller screens */
+    }
+
+    .user-dashboard-container h2 {
+        font-size: 1.5rem; /* Adjust header size for smaller screens */
+    }
+
+    .user-dashboard-container p {
+        font-size: 0.875rem; /* Adjust text size for smaller screens */
+    }
+}
